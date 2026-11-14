@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f6f2">
+  <meta name="description" content="Buy and sell with people on your campus. Find textbooks, dorm essentials, electronics and more.">
+  <title>Campus Market — Good finds, closer by</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <div class="announcement"><span class="announcement-dot"></span> Your campus. Your community. Your marketplace.</div>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Campus Market home"><span class="brand-mark">c<span>m</span></span><span>campus<span class="brand-light">market</span></span></a>
+    <label class="searchbox"><span class="search-icon" aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search books, room stuff, and more…" aria-label="Search listings"><kbd>⌘ K</kbd></label>
+    <nav class="header-actions"><button class="text-button" id="ordersButton" hidden>My orders</button><button class="text-button" id="loginButton">Log in</button><button class="sell-button" id="sellButton"><span>＋</span> Sell an item</button><button class="cart-button" id="cartButton" aria-label="Open cart"><span>Bag</span><span class="cart-count" id="cartCount">0</span></button><button class="avatar" id="avatarButton" aria-label="Account" hidden>U</button></nav>
+  </header>
+  <main>
+    <section class="hero"><div class="hero-copy"><div class="eyebrow"><span>✳</span> THE STUDENT-TO-STUDENT MARKET</div><h1>Good finds.<br><em>Closer by.</em></h1><p>Discover what your campus has to offer. Shop smart, sell easy, and keep good things moving.</p><div class="hero-actions"><button class="primary-button" id="exploreButton">Explore the market <span>↘</span></button><span class="community-note"><span class="mini-avatars"><i>J</i><i>A</i><i>M</i></span> Made for campus life</span></div></div><div class="hero-art"><div class="sun-shape"></div><div class="hero-photo"></div><div class="floating-tag tag-top"><span>↗</span> Passing it on</div><div class="floating-tag tag-bottom"><span class="tag-star">✳</span> Good things, nearby</div><div class="hero-sticker">YOUR<br>CAMPUS<br>FINDS <span>✳</span></div></div><div class="hero-bottom"><span>GOOD FOR YOUR WALLET</span><span class="hero-bottom-line"></span><span>GOOD FOR YOUR CAMPUS</span></div></section>
+    <section class="market-section" id="market"><div class="section-heading"><div><div class="eyebrow muted-eyebrow">A LITTLE BIT OF EVERYTHING</div><h2>Find your next <em>favorite.</em></h2></div><button class="outline-button" id="sellButtonSecondary">List something <span>↗</span></button></div>
+      <div class="category-row" id="categories" aria-label="Filter by category"></div>
+      <div class="results-line"><span id="resultCount">Loading finds…</span><span class="sort-label">COMMUNITY LISTINGS <span>✳</span></span></div>
+      <div class="product-grid" id="productGrid" aria-live="polite"></div>
+      <div class="empty-state" id="emptyState" hidden><span>✳</span><h3>No finds just yet</h3><p>Try another search or be the first to list something.</p><button class="primary-button" id="emptySellButton">List an item <span>↗</span></button></div>
+    </section>
+    <section class="sell-banner"><div class="banner-spark">✳</div><div><div class="eyebrow">THAT THING YOU DON'T NEED ANYMORE?</div><h2>It could be someone's <em>next favorite.</em></h2></div><button class="light-button" id="bannerSellButton">Make their day <span>↗</span></button></section>
+  </main>
+  <footer><a class="brand footer-brand" href="/"><span class="brand-mark">c<span>m</span></span><span>campus<span class="brand-light">market</span></span></a><span>Made for campus life. Built for passing it on.</span><span>Buy close. Live well. <b>✳</b></span></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="overlay" id="overlay" hidden><div class="dialog" role="dialog" aria-modal="true" aria-labelledby="dialogTitle"><button class="dialog-close" id="dialogClose" aria-label="Close">×</button><div id="dialogContent"></div></div></div>
+</body>
+</html>
